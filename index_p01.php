@@ -209,7 +209,7 @@
         <a class="whiteText" data-id="fertilizer"><i class="fa-solid fa-toolbox"></i><span>Fertilizer</span></a>
       </li>
 
-      <div id="marker"><span></span></div>
+      <!-- <div id="marker"><span></span></div> -->
 
     </ul>
 

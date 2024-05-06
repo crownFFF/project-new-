@@ -34,20 +34,20 @@ document.querySelector('.container').addEventListener('mouseleave', () => {
 })
 
 // smallNav
-const marker = document.querySelector('#marker')
-const markerSpan = document.querySelector('#marker span')
+// const marker = document.querySelector('#marker')
+// const markerSpan = document.querySelector('#marker span')
 const list = document.querySelectorAll('.smallnavUL li')
 
 
-function moveIndicator(e) {
-  marker.style.left = e.offsetLeft + 'px'
-  marker.style.width = e.offsetWidth + 'px'
-}
-list.forEach(link => {
-  link.addEventListener('click', e => {
-    moveIndicator(e.target)
-  })
-})
+// function moveIndicator(e) {
+//   marker.style.left = e.offsetLeft + 'px'
+//   marker.style.width = e.offsetWidth + 'px'
+// }
+// list.forEach(link => {
+//   link.addEventListener('click', e => {
+//     moveIndicator(e.target)
+//   })
+// })
 
 // add active class in selected list item
 function activeLink() {
@@ -57,8 +57,8 @@ function activeLink() {
     item.classList.remove('active')
   })
 
-  marker.style.display = 'block'
-  markerSpan.style.display = 'block'
+  // marker.style.display = 'block'
+  // markerSpan.style.display = 'block'
   this.classList.add('active')
 
 }
