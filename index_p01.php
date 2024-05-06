@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>project</title>
+  <title>售栽戶project</title>
   <link rel="stylesheet" href="project.css">
   <link rel="stylesheet" href="projectTText.css">
   <link rel="stylesheet" href="project_button.css">
@@ -17,7 +17,9 @@
 </head>
 
 <body>
+   <!-- cursor -->
   <div class="cursor"></div>
+
   <!-- Parallax -->
   <div data-relative-input="true" id="scene">
     <div data-depth="0.15"><img src="./images/BGI/leftBGI.png" alt="" class="leftBGI"></div>
@@ -684,6 +686,8 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
   <script src="project.js"></script>
+
+  <!-- https://codepen.io/z-/pen/zYxdRQy -->
 
 </body>
 
