@@ -17,7 +17,7 @@
 </head>
 
 <body>
-   <!-- cursor -->
+  <!-- cursor -->
   <div class="cursor"></div>
 
   <!-- Parallax -->
@@ -640,49 +640,50 @@
   </section>
 
   <!-- footer -->
-  <footer>
+  <section class="footer">
+    <div class="bubbles"></div>
+    <div class="content">
+      <!-- footerIcon -->
+      <ul class="social_icon">
 
-    <!-- waves -->
-    <div class="waves">
-      <div class="wave" id="wave1"></div>
-      <div class="wave" id="wave2"></div>
-      <div class="wave" id="wave3"></div>
-      <div class="wave" id="wave4"></div>
+        <li><a href="#">
+            <i class="fa-brands fa-facebook"></i></a>
+        </li>
+
+        <li><a href="#">
+            <i class="fa-brands fa-instagram"></i></a>
+        </li>
+
+        <li><a href="#">
+            <i class="fa-brands fa-youtube"></i></a>
+        </li>
+
+        <li><a href="#">
+            <i class="fa-brands fa-google"></i></a>
+        </li>
+
+      </ul>
+
+      <!-- footerText -->
+      <ul class="footer_menu">
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">SERVICES</a></li>
+        <li><a href="#">LOGIN</a></li>
+      </ul>
     </div>
-
-
-    <!-- footerIcon -->
-    <ul class="social_icon">
-
-      <li><a href="#">
-          <i class="fa-brands fa-facebook"></i></a>
-      </li>
-
-      <li><a href="#">
-          <i class="fa-brands fa-instagram"></i></a>
-      </li>
-
-      <li><a href="#">
-          <i class="fa-brands fa-youtube"></i></a>
-      </li>
-
-      <li><a href="#">
-          <i class="fa-brands fa-google"></i></a>
-      </li>
-
-    </ul>
-
-    <!-- footerText -->
-    <ul class="footer_menu">
-      <li><a href="#">HOME</a></li>
-      <li><a href="#">ABOUT</a></li>
-      <li><a href="#">SERVICES</a></li>
-      <li><a href="#">LOGIN</a></li>
-    </ul>
-
-    <p>Copyright © 2024 Succulent Symphony. All rights reserved.</p>
-
-  </footer>
+  </section>
+  <!-- footer-animate -->
+  <svg style="position:fixed; top:100vh">
+    <defs>
+      <filter id="blob">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="blob">
+        </feColorMatrix>
+        <!--feComposite(in="SourceGraphic" in2="blob" operator="atop") //After reviewing this after years I can't remember why I added this but it isn't necessary for the blob effect-->
+      </filter>
+    </defs>
+  </svg>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
   <script src="project.js"></script>

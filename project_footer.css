@@ -1,40 +1,87 @@
-/* footer */
-
-footer {
+body .footer {
+  z-index: 1;
+  --footer-background:#a0f3b4;
+  display: grid;
   position: relative;
-  quotes: 100%;
-  background: #68cd8d;
-  min-height: 100px;
-  padding: 20px 50px;
+  grid-area: footer;
+  min-height: 12rem;
+  width: 100vw;
+}
+body .footer .bubbles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1rem;
+  background: var(--footer-background);
+  filter: url("#blob");
+
+}
+body .footer .bubbles .bubble {
+  position: absolute;
+  left: var(--position, 50%);
+  background: var(--footer-background);
+  border-radius: 100%;
+  animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s), bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+  transform: translate(-50%, 100%);
+}
+body .footer .content {
+  z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 101vw;
-
-  left: 0;
-  bottom: 0;
-
-
-
+  padding: 2rem;
+  background: var(--footer-background);
+}
+body .footer .content a, body .footer .content p {
+  color: #F5F7FA;
+  text-decoration: none;
+}
+body .footer .content b {
+  color: white;
+}
+body .footer .content p {
+  margin: 0;
+  font-size: 0.75rem;
+}
+body .footer .content > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body .footer .content > div > div {
+  margin: 0.25rem 0;
+}
+body .footer .content > div > div > * {
+  margin-right: 0.5rem;
+}
+body .footer .content > div .image {
+  align-self: center;
+  width: 4rem;
+  height: 4rem;
+  margin: 0.25rem 0;
+  background-size: cover;
+  background-position: center;
 }
 
-footer .social_icon,
-footer .footer_menu {
+.footer .social_icon,
+.footer .footer_menu {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 10px 0;
+
 }
 
-footer .social_icon li,
-footer .footer_menu li {
+.footer .social_icon li,
+.footer .footer_menu li {
   list-style: none;
 
 }
 
-footer .social_icon li a{
+.footer .social_icon li a{
   font-size: 2em;
   color: #fff;
   margin: 0 10px;
@@ -42,11 +89,11 @@ footer .social_icon li a{
   transition: .5s;
 }
 
-footer .social_icon li a:hover {
+.footer .social_icon li a:hover {
   transform: translateY(-10px);
 }
 
-footer .footer_menu li a{
+.footer .footer_menu li a{
   font-size: 1.2em;
   color: #fff;
   margin: 0 10px;
@@ -56,11 +103,11 @@ footer .footer_menu li a{
   opacity: 0.75;
 }
 
-footer .footer_menu li a:hover{
+.footer .footer_menu li a:hover{
   opacity: 1;
 }
 
-footer p {
+.footer p {
   color: #fff;
   text-align: center;
   margin-top: 15px;
@@ -68,54 +115,21 @@ footer p {
   font-size: 1.1em;
 }
 
-footer .wave{
-  position: absolute;
-  top: -100px;
-  left: 0;
-  width: 100%;
-  height: 100px;
-  background:url("./images/BGI/wave.png");
-  background-size: 1000px 100px;
-}
-
-footer .wave#wave1{
-  z-index: 1000;
-  opacity: 1;
-  bottom: 0;
-  animation: animateWave 4s linear infinite;
-}
-footer .wave#wave2{
-  z-index: 999;
-  opacity: 0.5;
-  bottom: 10px;
-  animation: animateWave_02 4s linear infinite;
-}
-footer .wave#wave3{
-  z-index: 1000;
-  opacity: 0.2;
-  bottom: 15px;
-  animation: animateWave 3s linear infinite;
-}
-footer .wave#wave4{
-  z-index: 999;
-  opacity: 0.7;
-  bottom: 20px;
-  animation: animateWave_02 3s linear infinite;
-}
-
-@keyframes animateWave{
-  0%{
-    background-position-x: 1000px;
+@keyframes bubble-size {
+  0%, 75% {
+    width: var(--size, 4rem);
+    height: var(--size, 4rem);
   }
-  100%{
-    background-position-x: 0px;
+  100% {
+    width: 0rem;
+    height: 0rem;
   }
 }
-@keyframes animateWave_02{
-  0%{
-    background-position-x: 0px;
+@keyframes bubble-move {
+  0% {
+    bottom: -4rem;
   }
-  100%{
-    background-position-x: 1000px;
+  100% {
+    bottom: var(--distance, 10rem);
   }
-}
+}/*# sourceMappingURL=test.css.map */
