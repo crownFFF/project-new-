@@ -21,6 +21,7 @@ body {
   flex-wrap: wrap;
   flex-direction: column;
   overflow:hidden visible;
+  /* cursor: none; */
 }
 
 

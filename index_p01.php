@@ -11,12 +11,13 @@
   <link rel="stylesheet" href="project_card.css">
   <link rel="stylesheet" href="project_footer.css">
   <link rel="stylesheet" href="project_Parallax.css">
+  <link rel="stylesheet" href="project_cursor.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-
+  <div class="cursor"></div>
   <!-- Parallax -->
   <div data-relative-input="true" id="scene">
     <div data-depth="0.15"><img src="./images/BGI/leftBGI.png" alt="" class="leftBGI"></div>
@@ -26,7 +27,7 @@
   <!-- gotopButton -->
   <div class="gotopButton">
     <a href="#">
-    <i class="fa-regular fa-circle-up fa-2xl" ></i>
+      <i class="fa-regular fa-circle-up fa-2xl"></i>
     </a>
   </div>
 
@@ -188,20 +189,20 @@
     <ul class="smallnavUL">
 
       <li class="active">
-        <a class="whiteText" data-id="Bonsai" >
-          <i class="fa-solid fa-leaf" ></i><span>Bonsai</span></a>
+        <a class="whiteText" data-id="Bonsai">
+          <i class="fa-solid fa-leaf"></i><span>Bonsai</span></a>
       </li>
 
-      <li >
+      <li>
         <a class="whiteText" data-id="cactus">
-          <i class="fa-solid fa-tree" ></i><span>Cactus</span></a>
+          <i class="fa-solid fa-tree"></i><span>Cactus</span></a>
       </li>
 
-      <li >
+      <li>
         <a class="whiteText" data-id="Tillandsia"><i class="fa-brands fa-pagelines"></i> <span>Tillandsia</span></a>
       </li>
 
-      <li >
+      <li>
         <a class="whiteText" data-id="pottedPlant"><i class="fa-solid fa-hammer"></i><span>PottedPlant</span></a>
       </li>
 

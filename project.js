@@ -34,6 +34,7 @@ document.querySelector('.container').addEventListener('mouseleave', () => {
 })
 
 // smallNav
+
 // const marker = document.querySelector('#marker')
 // const markerSpan = document.querySelector('#marker span')
 const list = document.querySelectorAll('.smallnavUL li')
@@ -63,10 +64,11 @@ function activeLink() {
 
 }
 
-
 list.forEach(item => {
   item.addEventListener('click', activeLink)
 })
+
+
 
 // Parallax
 const scene = document.getElementById('scene');
@@ -87,4 +89,21 @@ smallnav.forEach(item => {
     document.querySelector("#card__pruoduce .card__active").classList.remove('card__active')
     document.querySelector(`.${e.target.dataset.id}`).classList.add('card__active')
   })
+})
+
+
+
+// cursor
+const cursor = document.querySelector('.cursor');
+
+document.addEventListener('mousemove', e => {
+    cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
+})
+
+document.addEventListener('click', () => {
+    cursor.classList.add("expand");
+
+    setTimeout(() => {
+        cursor.classList.remove("expand");
+    }, 500)
 })
