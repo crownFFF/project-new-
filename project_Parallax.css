@@ -1,0 +1,28 @@
+
+.leftBGI {
+  position: absolute;
+  height: 80vh;
+  left: -90px;
+  z-index: 100;
+}
+
+.rightBGI {
+  position: absolute;
+  height: 80vh;
+  top: 250px;
+  left: 100vw;
+  transform: translateX(-90%);
+}
+
+.gotopButton{
+  position: fixed;
+  color: #e0ffec;
+  font-size: 28px;
+  bottom: 5vh;
+  right: 5vw;
+  z-index: 1001;
+}
+
+.gotopButton i{
+  color: #ffffff;
+}
