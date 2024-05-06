@@ -80,7 +80,7 @@ parallaxInstance.friction(0.1, 0.075);
 
 // card
 const smallnav = document.querySelectorAll('.smallnavUL a')
-console.log(smallnav);
+
 smallnav.forEach(item => {
   item.addEventListener('click', (e) => {
     console.log(e.target.dataset.id)
