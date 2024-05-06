@@ -39,7 +39,7 @@ html{
   display: flex;
   justify-content: space-between;
   align-content: center;
-  z-index: 100;
+  z-index: 9999;
 }
 
 .header::before {
@@ -464,3 +464,17 @@ html{
   border-bottom: 1px solid #afffc7;
   display: none;
 } */
+
+/* gotopButton */
+.gotopButton{
+  position: fixed;
+  color: #e0ffec;
+  font-size: 28px;
+  bottom: 5vh;
+  right: 5vw;
+  z-index: 1001;
+}
+
+.gotopButton i{
+  color: #ffffff;
+}

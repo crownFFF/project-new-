@@ -1,11 +1,14 @@
 /* card */
+#card__pruoduce {
+  z-index: 1000;
+}
+
 .card__container_main {
   display: grid;
   place-items: center;
   margin-inline: 1.5rem;
   padding-block: 5rem;
   min-height: 100%;
-
 }
 
 .card__container {
@@ -55,7 +58,7 @@
 .card__button {
   text-decoration: none;
   font-weight: 500;
-  background: linear-gradient(#187c45,#86b7f7);
+  background: linear-gradient(#187c45, #86b7f7);
   background-clip: text;
   color: transparent;
 }
@@ -75,7 +78,7 @@
 
 /* hover */
 .card__button:hover {
-  background: linear-gradient(#aecdf5,#86e6b1);
+  background: linear-gradient(#aecdf5, #86e6b1);
   background-clip: text;
   color: transparent;
 }
