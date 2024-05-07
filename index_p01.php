@@ -23,9 +23,7 @@
   <section class='wrapper'>
     <div class='hero'>
     </div>
-    <div class='content'>
-    </div>
-
+   
     <!-- cursor -->
     <div class="cursor"></div>
 
@@ -697,7 +695,7 @@
     </svg>
 
 
-  </section>
+ 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
   <script src="project.js"></script>
