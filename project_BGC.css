@@ -45,7 +45,9 @@
       #e879f9 15%,
       #60a5fa 20%,
       #5eead4 25%,
-      #60a5fa 30%
+      #60a5fa 30%,
+      #ff0000 30%,
+      #ebfa60 30%
     );
     background-image: var(--stripes), var(--rainbow);
     background-size: 300%, 200%;
