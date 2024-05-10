@@ -372,7 +372,10 @@ html{
 }
 
 
-.smallnavUL {
+
+
+
+.smallnavUL,.smallnavUL_list {
   position: relative;
   display: flex;
   justify-content: center;
@@ -383,12 +386,14 @@ html{
   /* border-radius: 30px; */
 }
 
-.smallnavUL li {
+.smallnavUL li,
+.smallnavUL_list li {
   list-style: none;
 
 }
 
-.smallnavUL li a {
+.smallnavUL li a,
+.smallnavUL_list li a {
   text-decoration: none;
   cursor: pointer;
   position: relative;
@@ -402,18 +407,21 @@ html{
   margin-left: 10px;
 }
 
-.smallnavUL li a i {
+.smallnavUL li a i,
+.smallnavUL_list li a i {
   font-size: 2.5em;
   transition: .5s;
   pointer-events: none;
 }
 
-.smallnavUL li:hover a i {
+.smallnavUL li:hover a i,
+.smallnavUL_list li:hover a i {
   color: #afffc7;
   filter: drop-shadow(0 0 15px #afffc7);
 }
 
-.smallnavUL li.active a i {
+.smallnavUL li.active a i,
+.smallnavUL_list li.active a i{
   color: #afffc7;
   filter: drop-shadow(0 0 15px #afffc7);
   transform: translateY(-20px);
@@ -434,18 +442,20 @@ html{
   display: none;
 } */
 
-.smallnavUL li span {
+.smallnavUL li span,
+.smallnavUL_list li span {
   text-align: center;
   position: absolute;
   pointer-events: none;
   transform: translateY(30px);
   opacity: 0;
-  font-size: 0.7em;
+  font-size: 1em;
   transition: .5s;
   text-transform: uppercase;
 }
 
-.smallnavUL li.active span {
+.smallnavUL li.active span,
+.smallnavUL_list li.active span {
   opacity: 1;
   color: #afffc7;
   filter: drop-shadow(0 0 10px #afffc7);
@@ -464,6 +474,20 @@ html{
   border-bottom: 1px solid #afffc7;
   display: none;
 } */
+
+.smallnavUL_list[data-id="Bonsai"],
+.smallnavUL_list[data-id="cactus"],
+.smallnavUL_list[data-id="Tillandsia"],
+.smallnavUL_list[data-id="pottedPlant"],
+.smallnavUL_list[data-id="fertilizer"]{
+  display: none;
+}
+
+.smallnav_list_active{
+  display: flex !important;
+}
+
+
 
 /* gotopButton */
 .gotopButton{

@@ -10,14 +10,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>售栽戶project</title>
-  <link rel="stylesheet" href="project.css">
-  <link rel="stylesheet" href="projectTText.css">
-  <link rel="stylesheet" href="project_button.css">
-  <link rel="stylesheet" href="project_card.css">
-  <link rel="stylesheet" href="project_footer.css">
-  <link rel="stylesheet" href="project_Parallax.css">
-  <link rel="stylesheet" href="project_cursor.css">
-  <link rel="stylesheet" href="project_BGC.css">
+  <link rel="stylesheet" href="./css/project.css">
+  <link rel="stylesheet" href="./css/projectTText.css">
+  <link rel="stylesheet" href="./css/project_button.css">
+  <link rel="stylesheet" href="./css/project_card.css">
+  <link rel="stylesheet" href="./css/project_footer.css">
+  <link rel="stylesheet" href="./css/project_Parallax.css">
+  <link rel="stylesheet" href="./css/project_cursor.css">
+  <link rel="stylesheet" href="./css/project_BGC.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -145,32 +145,138 @@
 
     </section>
 
+
     <!-- smallnav -->
     <section id="smallnav">
 
       <ul class="smallnavUL">
 
-        <!-- 後端資料庫連接-類別 -->
-        <?php
-        $SQLstring = "SELECT * FROM icon ORDER BY i_id";
-        $icon = $link->query($SQLstring);
-        ?>
+        <li class="active">
+          <a class="whiteText" data-id="Bonsai">
+            <i class="fa-solid fa-leaf"></i><span>Bonsai</span></a>
+        </li>
 
-        <?php
-        $i = 0;
-        while ($icon_rows = $icon->fetch()) {
-        ?>
+        <li>
+          <a class="whiteText" data-id="cactus">
+            <i class="fa-solid fa-tree"></i><span>Cactus</span></a>
+        </li>
 
-          <li class="<?php echo $i==0? "active":''; ?>">
-            <a class="whiteText" data-id="<?php echo $icon_rows['i_data'] ?>">
-              <i class="<?php echo $icon_rows['i_class'] ?>"></i><span><?php echo $icon_rows['i_data'] ?></span></a>
-          </li>
+        <li>
+          <a class="whiteText" data-id="Tillandsia"><i class="fa-brands fa-pagelines"></i> <span>Tillandsia</span></a>
+        </li>
 
-        <?php $i++;
-        } ?>
+        <li>
+          <a class="whiteText" data-id="pottedPlant"><i class="fa-solid fa-hammer"></i><span>PottedPlant</span></a>
+        </li>
+
+        <li>
+          <a class="whiteText" data-id="fertilizer"><i class="fa-solid fa-toolbox"></i><span>Fertilizer</span></a>
+        </li>
 
         <!-- <div id="marker"><span></span></div> -->
 
+      </ul>
+
+    </section>
+    <!-- smallnav_list -->
+    <section id="smallnav_list">
+
+      <!-- 多肉分類 -->
+      <ul class="smallnavUL_list Bonsai smallnav_list_active" data-id="Bonsai">
+
+        <li class="active">
+          <a class="whiteText" data-id="Crassulaceae">
+            <i class="fa-solid fa-diamond"></i><span>景天科</span></a>
+        </li>
+
+        <li>
+          <a class="whiteText" data-id="Piperaceae">
+            <i class="fa-solid fa-diamond"></i><span>胡椒科</span></a>
+        </li>
+
+        <li>
+          <a class="whiteText" data-id="Asteraceae">
+            <i class="fa-solid fa-diamond"></i><span>菊科</span></a>
+        </li>
+
+
+      </ul>
+      <!-- 仙人掌分類 -->
+      <ul class="smallnavUL_list cactus" data-id="cactus">
+        <li>
+          <a class="whiteText" data-id="Echinopsis">
+            <i class="fa-solid fa-diamond"></i><span>仙人球屬</span></a>
+        </li>
+        <li>
+          <a class="whiteText" data-id="Epiphyllum">
+            <i class="fa-solid fa-diamond"></i><span>曇花屬</span></a>
+        </li>
+        <li>
+          <a class="whiteText" data-id="Hatiora">
+            <i class="fa-solid fa-diamond"></i> <span>仙人棒屬</span></a>
+        </li>
+        <li>
+          <a class="whiteText" data-id="Melocactus">
+            <i class="fa-solid fa-diamond"></i><span>花座球屬</span></a>
+        </li>
+
+        <!-- <div id="marker"><span></span></div> -->
+      </ul>
+      <!-- 空氣鳳梨分類 -->
+      <ul class="smallnavUL_list Tillandsia" data-id="Tillandsia">
+        <li>
+          <a class="whiteText" data-id="Elf">
+            <i class="fa-solid fa-diamond"></i><span>小精靈系列</span></a>
+        </li>
+        <li>
+          <a class="whiteText" data-id="other">
+            <i class="fa-solid fa-diamond"></i><span>其他</span></a>
+        </li>
+        <!-- <div id="marker"><span></span></div> -->
+      </ul>
+      <!-- 盆栽分類 -->
+      <ul class="smallnavUL_list pottedPlant" data-id="pottedPlant">
+
+        <li>
+          <a class="whiteText" data-id="Japanese">
+            <i class="fa-solid fa-diamond"></i><span>日式</span></a>
+        </li>
+
+        <li>
+          <a class="whiteText" data-id="Circle">
+            <i class="fa-solid fa-diamond"></i><span>圓系列</span></a>
+        </li>
+
+        <li>
+          <a class="whiteText" data-id="Square">
+            <i class="fa-solid fa-diamond"></i> <span>方系列</span></a>
+        </li>
+
+        <li>
+          <a class="whiteText" data-id="Porcelain">
+            <i class="fa-solid fa-diamond"></i><span>陶瓷</span></a>
+        </li>
+
+        <li>
+          <a class="whiteText" data-id="Common">
+            <i class="fa-solid fa-diamond"></i><span>一般</span></a>
+        </li>
+
+        <!-- <div id="marker"><span></span></div> -->
+      </ul>
+      <!-- 肥料 用具 分類 -->
+      <ul class="smallnavUL_list fertilizer" data-id="fertilizer">
+        <li>
+          <a class="whiteText" data-id="Food">
+            <i class="fa-solid fa-diamond"></i><span>肥料</span></a>
+        </li>
+
+        <li>
+          <a class="whiteText" data-id="Utensils">
+            <i class="fa-solid fa-diamond"></i><span>用具</span></a>
+        </li>
+
+        <!-- <div id="marker"><span></span></div> -->
       </ul>
 
     </section>
@@ -630,6 +736,7 @@
         </ul>
       </div>
     </section>
+
     <!-- footer-animate -->
     <svg style="position:fixed; top:100vh">
       <defs>

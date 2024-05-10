@@ -38,6 +38,7 @@ document.querySelector('.container').addEventListener('mouseleave', () => {
 // const marker = document.querySelector('#marker')
 // const markerSpan = document.querySelector('#marker span')
 const list = document.querySelectorAll('.smallnavUL li')
+const list_list = document.querySelectorAll('.smallnavUL_list li')
 
 
 // function moveIndicator(e) {
@@ -53,8 +54,20 @@ const list = document.querySelectorAll('.smallnavUL li')
 // add active class in selected list item
 function activeLink() {
 
-
   list.forEach(item => {
+    item.classList.remove('active')
+  })
+
+  // marker.style.display = 'block'
+  // markerSpan.style.display = 'block'
+  this.classList.add('active')
+
+}
+
+function activeLink_list() {
+
+
+  list_list.forEach(item => {
     item.classList.remove('active')
   })
 
@@ -66,6 +79,9 @@ function activeLink() {
 
 list.forEach(item => {
   item.addEventListener('click', activeLink)
+})
+list_list.forEach(item => {
+  item.addEventListener('click', activeLink_list)
 })
 
 
@@ -80,14 +96,18 @@ const parallaxInstance = new Parallax(scene, {
 parallaxInstance.friction(0.1, 0.075);
 
 
-// card
+// smallnav
 const smallnav = document.querySelectorAll('.smallnavUL a')
 
 smallnav.forEach(item => {
   item.addEventListener('click', (e) => {
     console.log(e.target.dataset.id)
-    document.querySelector("#card__pruoduce .card__active").classList.remove('card__active')
-    document.querySelector(`.${e.target.dataset.id}`).classList.add('card__active')
+    document.querySelector("#smallnav_list .smallnav_list_active").classList.remove('smallnav_list_active')
+
+    // 邏輯中斷
+    document.querySelector("#smallnav_list .active") && document.querySelector("#smallnav_list .active").classList.remove('active')
+
+    document.querySelector(`.${e.target.dataset.id}`).classList.add('smallnav_list_active')
   })
 })
 
@@ -97,15 +117,15 @@ smallnav.forEach(item => {
 const cursor = document.querySelector('.cursor');
 
 document.addEventListener('mousemove', e => {
-    cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
+  cursor.setAttribute("style", "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;")
 })
 
 document.addEventListener('click', () => {
-    cursor.classList.add("expand");
+  cursor.classList.add("expand");
 
-    setTimeout(() => {
-        cursor.classList.remove("expand");
-    }, 500)
+  setTimeout(() => {
+    cursor.classList.remove("expand");
+  }, 500)
 })
 
 
