@@ -92,7 +92,6 @@ html{
   font-size: 2rem;
   font-weight: 900;
   display: flex;
-
 }
 
 .logoText {
@@ -231,7 +230,6 @@ html{
 /* carousel */
 .container {
   position: absolute;
-  
   top: 360px;
   left: 50%;
   transform: translate(-50%, -50%);

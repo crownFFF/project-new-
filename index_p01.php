@@ -1,3 +1,8 @@
+<?php include_once('./connections/conn_db.php') ?>
+<?php (!isset($_SESSION) ? session_start() : ""); ?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,7 +28,7 @@
   <section class='wrapper'>
     <div class='hero'>
     </div>
-   
+
     <!-- cursor -->
     <div class="cursor"></div>
 
@@ -39,8 +44,6 @@
         <i class="fa-regular fa-circle-up fa-2xl"></i>
       </a>
     </div>
-
-
 
     <!-- header -->
     <header class="header">
@@ -91,89 +94,37 @@
         <!-- 輪播圖片文字區塊 -->
         <div class="slide">
 
-          <!-- 輪播圖第1張圖 -->
-          <div class="item" style="background-image: url(./images/carousel1.jpg);">
-            <div class="content">
-              <div class="name whiteText">succulent</div>
-              <div class="des whiteText">
-                客製化多肉盆栽<br>
-                原始．清新．自然．純真<br>
-                森林系的四大元素，在充滿手感的溫度裡，看見多肉植物的生命力
-              </div>
-              <button>See more</button>
-            </div>
-          </div>
+          <!-- 後端資料庫連接-輪播圖 -->
+          <?php
+          $SQLstring = "SELECT * FROM carousel WHERE caro_online = 1 ORDER BY caro_sort";
+          $carousel = $link->query($SQLstring);
+          ?>
 
-          <!-- 輪播圖第2張圖 -->
-          <div class="item" style="background-image: url(./images/carousel2.jpg);">
-            <div class="content">
-              <div class="name">cactus</div>
-              <div class="des">
-                仙人掌入門懶人包<br>
-                一次搞懂市場上常見的人氣仙肉（仙人掌多肉）的照顧方式<br>
-                告訴你號稱最好照顧的仙人掌為什麼會黑掉、枯萎、徒長。
-              </div>
-              <button>See more</button>
-            </div>
-          </div>
+          <!-- 輪播圖 -->
+          <?php
+          $i = 0;
+          while ($data = $carousel->fetch()) {
+          ?>
 
-          <!-- 輪播圖第3張圖 -->
-          <div class="item" style="background-image: url(./images/carousel3.jpg);">
-            <div class="content">
-              <div class="name">Potted plant</div>
-              <div class="des">
-                迷你綠洲盆栽系列<br>
-                這個系列包含多種迷你植物，如多肉植物、小型盆景等，適合擺放在家中、辦公室或任何小型空間。<br>
-                植物精心挑選，確保品質優良且易於管理，適合初學者或喜愛植物的人士。<br>
-                每盆盆栽都配有精美的陶瓷盆或花盆，搭配不同造型和顏色，讓您可以根據個人喜好進行選擇。
+            <div class="item" style="background-image: url(./images/carousel/<?php echo $data['caro_pic'] ?>);">
+              <div class="content">
+                <div class="name whiteText">succulent</div>
+                <div class="des whiteText">
+                  客製化多肉盆栽<br>
+                  原始．清新．自然．純真<br>
+                  森林系的四大元素，在充滿手感的溫度裡，看見多肉植物的生命力
+                </div>
+                <button>See more</button>
               </div>
-              <button>See more</button>
             </div>
-          </div>
 
-          <!-- 輪播圖第4張圖 -->
-          <div class="item" style="background-image: url(./images/carousel4.jpg);">
-            <div class="content">
-              <div class="name whiteText">Bonsai</div>
-              <div class="des whiteText">
-                日式風格盆栽系列<br>
-                這個系列的盆栽受到日本文化的啟發，展現了日式庭園和盆景的美學特色。<br>
-                植物的選擇和擺放都經過精心設計，以簡潔、平衡和自然的風格為特色。<br>
-                使用傳統的日本陶瓷盆或盆景容器，展現出細膩的工藝和優雅的美感。
-              </div>
-              <button>See more</button>
-            </div>
-          </div>
+          <?php $i++;
+          } ?>
 
-          <!-- 輪播圖第5張圖 -->
-          <div class="item" style="background-image: url(./images/carousel5.jpg);">
-            <div class="content">
-              <div class="name">flash sale</div>
-              <div class="des">
-                【特價優惠】多肉植物一日限定！<br>
-                愛好多肉植物的朋友們，這是您的大好機會！<br>
-                我們的多肉植物精心栽培，品種豐富，色彩繽紛，現在正在特價優惠中！<br>
-                不要錯過這個絕佳的機會，讓您的空間充滿生氣和綠意。
-              </div>
-              <button>See more</button>
-            </div>
-          </div>
 
-          <!-- 輪播圖第6張圖 -->
-          <div class="item" style="background-image: url(./images/carousel6.jpg);">
-            <div class="content">
-              <div class="name whiteText">Echeveria</div>
-              <div class="des whiteText">
-                【石蓮】— 漂亮且易於照顧的多肉植物！<br>
-                現在特價優惠中！快來選購您喜歡的石蓮，讓您的家居環境更加舒適美好！<br>
-                數量有限，售完即止！
-              </div>
-              <button>See more</button>
-            </div>
-          </div>
+
 
         </div>
-
 
         <!-- 輪播圖按鈕區塊 -->
         <div class="button">
@@ -182,44 +133,41 @@
           <button class="prev">
             <i class="fa-solid fa-left-long"></i>
           </button>
+
           <!-- 下一張按鈕 -->
           <button class="next">
             <i class="fa-solid fa-right-long"></i>
           </button>
+
         </div>
 
       </div>
 
     </section>
 
-
-
     <!-- smallnav -->
     <section id="smallnav">
 
       <ul class="smallnavUL">
 
-        <li class="active">
-          <a class="whiteText" data-id="Bonsai">
-            <i class="fa-solid fa-leaf"></i><span>Bonsai</span></a>
-        </li>
+        <!-- 後端資料庫連接-類別 -->
+        <?php
+        $SQLstring = "SELECT * FROM icon ORDER BY i_id";
+        $icon = $link->query($SQLstring);
+        ?>
 
-        <li>
-          <a class="whiteText" data-id="cactus">
-            <i class="fa-solid fa-tree"></i><span>Cactus</span></a>
-        </li>
+        <?php
+        $i = 0;
+        while ($icon_rows = $icon->fetch()) {
+        ?>
 
-        <li>
-          <a class="whiteText" data-id="Tillandsia"><i class="fa-brands fa-pagelines"></i> <span>Tillandsia</span></a>
-        </li>
+          <li class="<?php echo $i==0? "active":''; ?>">
+            <a class="whiteText" data-id="<?php echo $icon_rows['i_data'] ?>">
+              <i class="<?php echo $icon_rows['i_class'] ?>"></i><span><?php echo $icon_rows['i_data'] ?></span></a>
+          </li>
 
-        <li>
-          <a class="whiteText" data-id="pottedPlant"><i class="fa-solid fa-hammer"></i><span>PottedPlant</span></a>
-        </li>
-
-        <li>
-          <a class="whiteText" data-id="fertilizer"><i class="fa-solid fa-toolbox"></i><span>Fertilizer</span></a>
-        </li>
+        <?php $i++;
+        } ?>
 
         <!-- <div id="marker"><span></span></div> -->
 
@@ -694,8 +642,7 @@
       </defs>
     </svg>
 
-
- 
+  </section>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
   <script src="project.js"></script>
