@@ -1,5 +1,5 @@
-<?php include_once('./connections/conn_db.php'); ?>
-<?php include_once('./php/buildNavigation.php'); ?>
+<?php include_once('./connections/conn_db.php') ?>
+<?php include_once('./php/buildNavigation.php') ?>
 <?php (!isset($_SESSION) ? session_start() : ""); ?>
 
 <!DOCTYPE html>
@@ -7,7 +7,6 @@
 
 <head>
   <?php include_once('./php/head.php') ?>
-
 </head>
 
 <body>
@@ -33,22 +32,29 @@
 
   <!-- carousel -->
   <section id="carousel">
-    <?php include_once('./php/carousel.php') ?>
+    <?php //include_once('./php/carousel.php') 
+    ?>
   </section>
 
 
   <!-- smallnav -->
   <section id="smallnav">
-    <?php include_once('./php/smallnav.php') ?>
+    <?php //include_once('./php/smallnav.php') ?>
   </section>
   <!-- smallnav_list -->
   <section id="smallnav_list">
-    <?php include_once('./php/smallnav_list.php') ?>
+    <?php //include_once('./php/smallnav_list.php') ?>
+  </section>
+
+  <!-- breadcrumb_list -->
+  <section class="breadcrumb_list">
+    <?php include_once('./php/breadcrumb_list.php') ?>
   </section>
 
   <!-- card -->
   <section id="card__pruoduce">
-    <?php include_once('./php/card__pruoduce.php') ?>
+    <?php //include_once('./php/card__pruoduce.php') ?>
+    <?php include_once('./php/good__content.php') ?>
   </section>
 
   <!-- footer -->
@@ -62,6 +68,7 @@
   </section>
 
   <?php include_once('./php/JS.php') ?>
+
 
 </body>
 

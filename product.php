@@ -1,5 +1,5 @@
-<?php include_once('./connections/conn_db.php'); ?>
-<?php include_once('./php/buildNavigation.php'); ?>
+<?php include_once('./connections/conn_db.php') ?>
+<?php include_once('./php/buildNavigation.php') ?>
 <?php (!isset($_SESSION) ? session_start() : ""); ?>
 
 <!DOCTYPE html>
@@ -7,7 +7,6 @@
 
 <head>
   <?php include_once('./php/head.php') ?>
-
 </head>
 
 <body>
@@ -19,7 +18,7 @@
   <?php include_once('./php/cursor.php') ?>
 
   <!-- Parallax -->
-  <?php //include_once('./php/Parallax.php') ?>
+  <?php include_once('./php/Parallax.php') ?>
 
 
   <!-- gotopButton -->
@@ -33,7 +32,8 @@
 
   <!-- carousel -->
   <section id="carousel">
-    <?php include_once('./php/carousel.php') ?>
+    <?php //include_once('./php/carousel.php') 
+    ?>
   </section>
 
 
@@ -44,6 +44,11 @@
   <!-- smallnav_list -->
   <section id="smallnav_list">
     <?php include_once('./php/smallnav_list.php') ?>
+  </section>
+
+  <!-- breadcrumb_list -->
+  <section class="breadcrumb_list">
+    <?php include_once('./php/breadcrumb_list.php') ?>
   </section>
 
   <!-- card -->
@@ -62,6 +67,7 @@
   </section>
 
   <?php include_once('./php/JS.php') ?>
+
 
 </body>
 

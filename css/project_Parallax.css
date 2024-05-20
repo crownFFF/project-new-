@@ -1,14 +1,13 @@
 .leftBGI {
   position: absolute;
   height: 80vh;
-  top: 80vh;
+  top: 10vh;
   left: -90px;
 }
 
 .rightBGI {
   position: absolute;
   height: 80vh;
-  top: 100vh;
   left: 100vw;
   transform: translateX(-90%);
 }

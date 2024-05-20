@@ -1,6 +1,8 @@
 /* card */
 #card__pruoduce {
   z-index: 1000;
+  flex: 1;
+  text-align: center;
 }
 
 .card__container_main {
@@ -63,15 +65,6 @@
   color: transparent;
 }
 
-/* .Bonsai,
-.cactus,
-.Tillandsia,
-.pottedPlant,
-.fertilizer {
-  display: none;
-} */
-
-
 
 .card__active {
   display: block;
@@ -83,8 +76,8 @@
   background: linear-gradient(#aecdf5, #86e6b1);
   background-clip: text;
   color: transparent;
+  
 }
-
 .card__article:hover .card__data {
   animation: show-data 1s forwards;
   opacity: 1;
@@ -150,67 +143,3 @@
 
 
 
-/* screen */
-@media screen and (max-width:340px) {
-  .card__container_main {
-    margin-inline: 1rem;
-  }
-
-  .card__data {
-    width: 250px;
-    padding: 1rem;
-  }
-
-  .card__description {
-    font-size: 1rem;
-  }
-
-  .card__title {
-    font-size: .8rem;
-  }
-
-
-}
-
-@media screen and (min-width:768px) {
-  .card__container {
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 1.5rem;
-  }
-
-  .card__description {
-    font-size: 1rem;
-  }
-
-  .card__title {
-    font-size: .8rem;
-  }
-}
-
-@media screen and (min-width:1120px) {
-  /* .card__container_main {
-    height: 100vh;
-  } */
-
-  .card__container {
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 1.5rem;
-  }
-
-  .card__img {
-    width: 348px;
-  }
-
-  .card__data {
-    width: 316px;
-    padding-inline: 2.5rem;
-  }
-
-  .card__description {
-    font-size: 1.5rem;
-  }
-
-  .card__title {
-    font-size: 1rem;
-  }
-}

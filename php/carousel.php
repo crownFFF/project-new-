@@ -5,8 +5,10 @@
 
         <!-- 後端資料庫連接-輪播圖 -->
         <?php
+
         $SQLstring = "SELECT * FROM carousel WHERE caro_online = 1 ORDER BY caro_sort";
         $carousel = $link->query($SQLstring);
+        
         ?>
 
         <!-- 輪播圖 -->
