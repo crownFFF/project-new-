@@ -190,7 +190,7 @@ input[type=number]::-webkit-inner-spin-button {
   word-wrap: break-word;
   background: #fff;
   color: #212121;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .contant_text::-webkit-scrollbar {
